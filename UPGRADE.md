@@ -2,6 +2,30 @@
 
 ## dev-develop
 
+### Deprecate usage of fos rest routing
+
+We are no longer considering the [fos rest routing](https://github.com/handcraftedinthealps/RestRoutingBundle) as a best practice.
+All bundles should use the Symfony routing system instead.
+
+Inside your `config/routes/sulu_website.yaml` and `config/routes/sulu_admin.yaml` you can remove the fos rest routing configuration.
+First, remove all instances of `type: rest` and also replace `.yml` with `.yaml`:
+
+```diff
+# config/routes/sulu_website.yaml`
+ sulu_comments:
+-    type: rest
+-    resource: "@SuluCommentBundle/Resources/config/routing_website.yml"
++    resource: "@SuluCommentBundle/Resources/config/routing_website.yaml"
+```
+
+```diff
+# config/routes/sulu_admin.yaml`
+ sulu_comment_api:
+-    type: rest
+-    resource: "@SuluCommentBundle/Resources/config/routing_api.yml"
++    resource: "@SuluCommentBundle/Resources/config/routing_api.yaml"
+     prefix: /admin/api
+```
 ### Rename comment_count property to commentCount
 
 The `comment_count` property of serialized threads was renamed to `commentCount`.

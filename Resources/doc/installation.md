@@ -16,8 +16,7 @@ Add the routes of the bundle to `config/routes/sulu_admin.yaml`:
 
 ```yaml
 sulu_comment_api:
-    type: rest
-    resource: "@SuluCommentBundle/Resources/config/routing_api.yml"
+    resource: "@SuluCommentBundle/Resources/config/routing_api.yaml"
     prefix: /admin/api
 ```
 
@@ -25,8 +24,7 @@ And `config/routes/sulu_website.yaml`:
 
 ```yaml
 sulu_comments:
-    type: rest
-    resource: "@SuluCommentBundle/Resources/config/routing_website.yml"
+    resource: "@SuluCommentBundle/Resources/config/routing_website.yaml"
 ```
 
 Follow the [Getting started](https://github.com/sulu/SuluCommentBundle/blob/master/Resources/doc/getting-started.md)

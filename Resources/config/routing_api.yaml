@@ -1,0 +1,116 @@
+sulu_comment.get_comments:
+    path: /comments.{_format}
+    controller: sulu_comment.comment_controller::cgetAction
+    methods: GET
+    format: json
+    requirements:
+        _format: json|csv
+    options:
+        expose: true
+
+sulu_comment.get_comment:
+    path: /comments/{id}.{_format}
+    controller: sulu_comment.comment_controller::getAction
+    methods: GET
+    format: json
+    requirements:
+        id: \d+
+        _format: json|csv
+    options:
+        expose: true
+
+sulu_comment.put_comment:
+    path: /comments/{id}.{_format}
+    controller: sulu_comment.comment_controller::putAction
+    methods: PUT
+    format: json
+    requirements:
+        id: \d+
+        _format: json|csv
+    options:
+        expose: true
+
+sulu_comment.delete_comment:
+    path: /comments/{id}.{_format}
+    controller: sulu_comment.comment_controller::deleteAction
+    methods: DELETE
+    format: json
+    requirements:
+        id: \d+
+        _format: json|csv
+    options:
+        expose: true
+
+sulu_comment.delete_comments:
+    path: /comments.{_format}
+    controller: sulu_comment.comment_controller::cdeleteAction
+    methods: DELETE
+    format: json
+    requirements:
+        _format: json|csv
+    options:
+        expose: true
+
+sulu_comment.post_comment_trigger:
+    path: /comments/{id}.{_format}
+    controller: sulu_comment.comment_controller::postTriggerAction
+    methods: POST
+    format: json
+    requirements:
+        id: \d+
+        _format: json|csv
+    options:
+        expose: true
+
+sulu_comment.get_threads:
+    path: /threads.{_format}
+    controller: sulu_comment.thread_controller::cgetAction
+    methods: GET
+    format: json
+    requirements:
+        _format: json|csv
+    options:
+        expose: true
+
+sulu_comment.get_thread:
+    path: /threads/{id}.{_format}
+    controller: sulu_comment.thread_controller::getAction
+    methods: GET
+    format: json
+    requirements:
+        id: \d+
+        _format: json|csv
+    options:
+        expose: true
+
+sulu_comment.put_thread:
+    path: /threads/{id}.{_format}
+    controller: sulu_comment.thread_controller::putAction
+    methods: PUT
+    format: json
+    requirements:
+        id: \d+
+        _format: json|csv
+    options:
+        expose: true
+
+sulu_comment.delete_thread:
+    path: /threads/{id}.{_format}
+    controller: sulu_comment.thread_controller::deleteAction
+    methods: DELETE
+    format: json
+    requirements:
+        id: \d+
+        _format: json|csv
+    options:
+        expose: true
+
+sulu_comment.delete_threads:
+    path: /threads.{_format}
+    controller: sulu_comment.thread_controller::cdeleteAction
+    methods: DELETE
+    format: json
+    requirements:
+        _format: json|csv
+    options:
+        expose: true

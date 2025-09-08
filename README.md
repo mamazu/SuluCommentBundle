@@ -24,16 +24,11 @@ The SuluCommentBundle adds support for adding comments to different types of ent
 * Website renderer
 * Sulu-Admin integration to delete and update comments
 
-## Status
-
-This repository will become version 1.0 of SuluCommentBundle. It is under **heavy development** and currently its APIs
-and code are not stable yet (pre 1.0).
-
 ## Requirements
 
 * Composer
-* PHP `^7.2`
-* Sulu `^2.0`
+* PHP `^8.2`
+* Sulu `^2.6`
 
 For detailed requirements see [composer.json](composer.json).
 

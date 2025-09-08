@@ -1,0 +1,41 @@
+sulu_comment.get_threads_comments:
+    path: /threads/{threadId}/comments.{_format}
+    controller: sulu_comment.website_comment_controller::cgetCommentsAction
+    methods: GET
+    format: html
+    requirements:
+        _format: html|json|csv
+
+sulu_comment.post_thread_comments:
+    path: /threads/{threadId}/comments.{_format}
+    controller: sulu_comment.website_comment_controller::postCommentsAction
+    methods: POST
+    format: html
+    requirements:
+        _format: html|json|csv
+
+sulu_comment.put_thread_comment:
+    path: /threads/{threadId}/comments/{commentId}.{_format}
+    controller: sulu_comment.website_comment_controller::putCommentAction
+    methods: POST
+    format: html
+    requirements:
+        commentId: \d+
+        _format: html|json|csv
+
+sulu_comment.delete_thread_comment:
+    path: /threads/{threadId}/comments/{commentId}.{_format}
+    controller: sulu_comment.website_comment_controller::deleteCommentAction
+    methods: DELETE
+    format: html
+    requirements:
+        commentId: \d+
+        _format: html|json|csv
+
+sulu_comment.get_threads_count:
+    path: /threads/{threadId}/count.{_format}
+    controller: sulu_comment.website_comment_controller::cgetCountAction
+    methods: GET
+    format: html
+    requirements:
+        _format: html|json|csv
